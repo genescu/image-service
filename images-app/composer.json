@@ -1,0 +1,19 @@
+{
+    "name": "images/app",
+    "autoload": {
+        "psr-4": {
+            "Images\\App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "George"
+        }
+    ],
+    "require": {
+        "gregwar/image": "2.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}

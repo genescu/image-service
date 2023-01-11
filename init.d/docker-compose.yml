@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  images-app:
+    build:
+      context: bin/webserver
+    restart: always
+    volumes:
+      - ${DOCUMENT_ROOT-./../images-app}:/var/www
+      - ${DOCUMENT_ROOT-./logs/apache2}:/var/log/apache2
+      - type: bind
+        source: ./docker-php.ini
+        target: /usr/local/etc/php/conf.d/docker-php.ini
+    ports:
+      - "12000:80"
